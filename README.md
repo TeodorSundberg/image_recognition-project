@@ -9,14 +9,14 @@ Cards can be simple one sentence structures of all english words like above or m
 
 
 
-
 However, each card generally has 4 generally main identifying features.
 
 Card name - Top left of Card
 Rules text - In the middle
 Symbol (used to narrow down the search only) - on the right
 Collector identifier number  - bottom left
-There is also a 5th thing which is artwork, but I plan to leave it out of scope in the 1st iteration.
+
+There is also a 5th thing which is artwork, but I plan to leave it out of scope in the 1st iteration of my project.
 
 
 I want to be able to train a program to identify cards, by having the minimal amount of information and sometimes not fully pixelated for a clear view.
@@ -30,14 +30,17 @@ I want to do the project in multiple steps.
 Where I can see stopping at step 2 and refining that as the only part of the project.
 
 Step 1: 
+
 Text Classification and OCR: Focus on analyzing text to train a text classification model and then working more on Optical Character Recognition to extract text from pictures. 
 CHAT GPT Suggestion: This could be done with models like BERT or fine-tuning on a library like Hugging Face.
+
 
 Step 2:
 Image Classification:
 I want to use the public card reader API which should be able to create an automated and labeled dataset of card images and text.
 CHAT GPT Suggestion: CNN or a model like ResNet
 Step 3:
+
 Multi-Object Detection:
 Training on multiple cards: The first model should be training on 1 picture per card, but the next one could be about training the modell to use a picture with several object
 Chat GPT Extra stuff for step 3	
@@ -57,6 +60,7 @@ Limitations
 
 
 Requirements
+
 Software Requirements
 Libraries
 pandas: For data manipulation and analysis.
