@@ -63,46 +63,70 @@ Requirements
 
 Software Requirements
 Libraries
+
 pandas: For data manipulation and analysis.
 scikit-learn: Machine learning algorithms and preprocessing.
 numpy: Numerical operations.
 requests: For API calls, or recommended API method for data sourcing.
+
 Classes and Methods
 CardData
 Responsible for loading, cleaning, and preprocessing Magic card data.
+
 Methods:
-load_data(): Load card data, possibly from a CSV, database, or API.
+load_data(): Load card data mainly API.
+
 clean_data(): Clean data by handling missing values, duplicates, and formatting inconsistencies.
+
 preprocess_data(): Preprocess the card data, such as converting card texts to a standard format.
+
 ImageData
 Handles images of Magic cards and preprocesses them for model training.
+
 Methods:
 load_image_data(): Load card images from a directory or API.
+
 annotate_data(): Annotate images with bounding boxes for multi-card detection.
+
 preprocess_image_data(): Resize, normalize, and apply any necessary transformations to the images.
+
 FeatureExtractor
 Extracts and encodes features from both text and image data.
+
 Methods:
 encode_text_features(): Process card text data, perhaps through tokenization and vectorization.
+
 extract_image_features(): Extract image features using pre-trained CNN layers or other relevant feature extraction methods.
+
 create_feature_matrix(): Combine extracted features into a single matrix for model input.
+
 CardRecognitionModel
 Implements the chosen model for card recognition and classification (e.g., YOLO for image detection, combined with OCR for text extraction).
 Methods:
+
 train_model(): Train the model to recognize and classify Magic cards.
+
 detect_cards(): Detect and classify multiple cards within a single image.
+
 extract_text(): Use OCR to extract text from identified card regions for further classification.
+
 UserInterface
+
 Manages user interactions and displays results.
+
 Methods:
+
 get_user_input(): Allows the user to specify image inputs or model preferences.
+
 display_classification_results(): Show detected cards, their names, and attributes to the user.
+
 This structure will support training and deployment of a Magic card recognition and classification model that can handle multiple cards in one image and output relevant text and card details.
 
 
 Extended END goal
 EVALUATE - 
 The end goal of what I want to do is to have video footage similar to this and be able to identify all of the cards in the picture
+with an AI model like YOLO to classify what is that.
 
 With varying levels of difficulty and ofc with the possibility of not having enough data to make a decision.
 
