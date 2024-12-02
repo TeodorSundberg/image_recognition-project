@@ -134,3 +134,5 @@ But I would be happy with just having being able to identify 1 card with faults 
 
 
 
+Seems to have issues with utf 8 and char in modell, manual fixes atm
+
