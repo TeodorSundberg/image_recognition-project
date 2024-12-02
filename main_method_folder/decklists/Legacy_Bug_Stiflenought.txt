@@ -1,0 +1,32 @@
+1 Bayou
+1 Island
+4 Misty Rainforest
+4 Polluted Delta
+3 Tropical Island
+2 Underground Sea
+4 Wasteland
+2 Murktide Regent
+4 Phyrexian Dreadnought
+4 Uro, Titan of Nature's Wrath
+4 Brainstorm
+3 Daze
+2 Fatal Push
+4 Force of Will
+4 Ponder
+2 Slip Out the Back
+4 Stifle
+2 Thoughtseize
+2 Witherbloom Command
+4 Dress Down
+Sideboard
+2 Carpet of Flowers
+1 Collector Ouphe
+1 Flusterstorm
+1 Force of Negation
+2 Hydroblast
+2 Leovold, Emissary of Trest
+1 Null Rod
+2 Pick Your Poison
+1 Plague Engineer
+1 Surgical Extraction
+1 Sylvan Library
