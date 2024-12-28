@@ -48,13 +48,13 @@ def main():
     options = {
         "1": "combine_txt_file.py",
         "2": "get_data_scryfall.py",
-        "3": "build_keras_img_mtg.py",
-        "4": "evaluate_keras_img_mtg.py",
+        "3": "prepare_image_folders.py",
+        "4": "build_keras_img_mtg.py",
         "5": "use_keras_img_mtg.py",
-        "6": "picture_from_video.py",
+        "6": "prepare_video_folders.py",
         "7": "build_yolo_mtg.py",
-        "8": "evaluate_yolo_mtg.py",
-        "9": "use_yolo_mtg.py",
+        "8": "use_yolo_mtg.py",
+        "9": "Runs all 1-8 sequentially",
         "10": "final_model.py"
     }
 
