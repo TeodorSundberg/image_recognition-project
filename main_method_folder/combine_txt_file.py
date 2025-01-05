@@ -1,3 +1,6 @@
+# I assume not super interesting, just creates a text file based on very common files that
+# I can find in most websites related to MTG
+
 import os
 import pandas as pd
 import re

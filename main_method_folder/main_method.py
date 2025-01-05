@@ -1,17 +1,17 @@
 # Call combine txt file |Combine and Download all data from txt files - create file, scryfall_input.txt
 # Call get_data_scryfall |send scryfall_input.txt to scryfall api to get as many images as possible from the list including extra and alternative art and card styles, if mtg card not found go to next row, clean out and save all images in folder scryfall_test_data/images and create label files in scryfall_test_data/labels
 # Call build_keras_img_mtg | use the scryfall_test_data downloaded data to train and save a keras modell that recognizes mtg images and produces a clean copy from scryfall 
+# Call prepare_augment_folders | it calls to augment the code
 # Call evaluate_keras_img_mtg | evaluate this keras model
-# Call use_keras_img_mtg | sends a picture into a keras modell and get a predicted response over which image is correct and send back the name of predicted card and an image from scryfall
-# call picture_from_video | if neccessary build a model that takes video and creates pictures or prepares data for yolo ingestion
-# Call build_yolo_mtg | Build a yolo framework that recognizes and draws boxes if a magic card is part of a picture or video - train modell on the keras modell partly
-# Call evaluate_yolo_mtg | tests the yolo modell by sending a picture into the modell and see mark which boxes are filled with magic cards
-# Call use_yolo_mtg | Uses the yolo modell by sending a picture into the modell and get back the pictures of everything it identifies as a magic card
-# call full model | the final part will then use the two trained models to get a video or array of pictures and then for each identified magic card it identifes in the yolo model it will send that data to the keras model to get the predicted name of the card
+# Call use_keras_img_mtg | sends a picture into a keras model and get a predicted response over which image is correct and send back the name of predicted card and an image from scryfall
+
+# 1,2,3, 31 prepares the data needed to train the model
+# It is possible to evaluate this model with only 4, 41, 5.
+# 6-10 is future extensions I would like to build, but they are too advanced for me to finish for now.
+# Maybe with more time
 
 
 import subprocess
-
 
 def run_option(script_name, status_log):
     """Run a subprocess for the given script and update the status log."""
@@ -47,15 +47,18 @@ def main():
     """Main method with a menu of options."""
     options = {
         "1": "combine_txt_file.py",
-        "2": "get_data_scryfall.py",
+        "2": "get_data_scryfall.py", # should be updated to get all different versions of each image
         "3": "prepare_image_folders.py",
+        "31" : "prepare_augment_folders.py", #added later to improve results
         "4": "build_keras_img_mtg.py",
+        "41": "evaluate_keras_img_mtg.py",
         "5": "use_keras_img_mtg.py",
-        "6": "prepare_video_folders.py",
-        "7": "build_yolo_mtg.py",
-        "8": "use_yolo_mtg.py",
-        "9": "Runs all 1-8 sequentially",
-        "10": "final_model.py"
+        "6": "prepare_video_folders.py", #will not be used for now
+        "7": "build_yolo_mtg.py", #will not be used for now
+        "8": "use_yolo_mtg.py", #will not be used for now
+        "9": "Runs all 1-8 sequentially", #will not be used for now
+        "10": "final_model.py" #will not be used for now, would run all previous steps 1 at the time ideally
+
     }
 
     status_log = {script: "Not run yet." for script in options.values()}
