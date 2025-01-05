@@ -1,3 +1,37 @@
+Hej
+Jag har valt och bygga ett bild igenkänningsverktyg som ska läsa in magic kort och estimera vilket det är utifrån en bild.
+
+enligt mina tester har jag ungefär 90% hit rate på nuvarande dataset.
+ifall det krävs kan jag föreslå hur man laddar ner mer data, det är relativt enkelt.
+
+Jag har valt keras som image recognition och algoritm val bygger mycket på att jag kommer ha perfekt tillgång till all data
+eftersom jag har ett api som alltid spottar ut data i ett valt format så kommer jag ha en rätt simpel variabel normalisering
+eftersom det mesta är så uniformt redan.
+
+keras filen är ca 1 gb så delar inte den här
+
+Processen är just nu
+1 ta massa listor av kort
+2 sortera och kombinera till en text fil
+3 ladda ner allt från en text fil genom api och sortera i mapp struktur
+4 augmentera datan med lite olika ljushet, vinkel och blur.
+5 bygg en modell
+ITERERA 4 och 5
+6 evaluera modellen.
+7 manuella test.
+
+
+För evaluering
+kör main_method i main method mappen
+Som ger dig olika script att köra för att bygga upp modellen
+
+kör 4 för att bygga keras modell, troligaste krasch är pga hårdvaru inställnignar tidigt i koden (min dator är soso)
+Sen köra 41 för att evaluera, den kollar alla bilder i mitt dataset och ger träffsäkerhet.
+
+
+
+
+The below text was my starting statement for when I started the project, and it is no longer that accurate
 Supervised Learning Project - Playing Card Reader
 
 
