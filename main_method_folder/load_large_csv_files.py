@@ -18,6 +18,6 @@ def load_large_csv_files(folder_path, output_file, chunk_size=100000):
     print(f"Combined dataset saved to {output_file}")
 
 if __name__ == "__main__":
-    input_folder = "path_to_your_csv_folder"  # Change this to your actual folder
+    input_folder = "/Users/teodorsundberg/Documents/psdata"  # Change this to your actual folder
     output_csv = "merged_data.csv"
     load_large_csv_files(input_folder, output_csv)

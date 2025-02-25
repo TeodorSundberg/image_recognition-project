@@ -25,6 +25,9 @@ def main():
         "1": "load_large_csv_files.py",  # Load and merge large CSV files
         "2": "clean_csv_data.py",  # Clean the dataset
         "3": "add_data_columns.py",  # Add new features
+        "3.1": "inspect_columns.py",  # Check Feature Importance via Correlation
+        "3.2": "statistical_significance.py",  # Run Statistical Significance Tests
+        "3.3": "feature_selection.py",  # Perform Feature Selection Techniques
         "4": "statistical_analysis.py",  # Perform EDA & statistical analysis
         "5": "prepare_training_data.py",  # Feature engineering and transformations
         "6": "train_model.py",  # Train a machine learning model
